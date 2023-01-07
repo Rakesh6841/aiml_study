@@ -37,7 +37,7 @@ for i in range(epoch):
     output = sigmoid(outinp)
     
 #Backpropagation
-#Lines(41-56) don't have any impact on output
+#Lines(41-55) don't have any impact on output
     EO = y-output
     outgrad = derivatives_sigmoid(output)
     d_output = EO* outgrad
@@ -53,7 +53,6 @@ for i in range(epoch):
     
 # dotproduct of nextlayererror and currentlayerop
     bout += np.sum(d_output, axis=0,keepdims=True) *lr 
-    wh += X.T.dot(d_hiddenlayer) *lr
 
 print("Input: \n" + str(X))
 print("Actual Output: \n" + str(y))
