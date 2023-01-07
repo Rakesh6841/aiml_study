@@ -40,9 +40,9 @@ for i in range(epoch):
     EO = y-output
     outgrad = derivatives_sigmoid(output)
     d_output = EO* outgrad
-    EH = d_output.dot(wout.T)
 
 #how much hidden layer wts contributed to error
+    EH = d_output.dot(wout.T)
     hiddengrad = derivatives_sigmoid(hlayer_act)
     d_hiddenlayer = EH * hiddengrad
     
