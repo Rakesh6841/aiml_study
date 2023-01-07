@@ -49,6 +49,10 @@ for i in range(epoch):
 # dotproduct of nextlayererror and currentlayerop
     wout += hlayer_act.T.dot(d_output) *lr
     wh += X.T.dot(d_hiddenlayer) *lr
+    
+# dotproduct of nextlayererror and currentlayerop
+    bout += np.sum(d_output, axis=0,keepdims=True) *lr 
+    wh += X.T.dot(d_hiddenlayer) *lr
 
 print("Input: \n" + str(X))
 print("Actual Output: \n" + str(y))
