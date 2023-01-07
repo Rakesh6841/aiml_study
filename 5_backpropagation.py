@@ -37,6 +37,7 @@ for i in range(epoch):
     output = sigmoid(outinp)
     
 #Backpropagation
+#Lines(41-56) don't have any impact on output
     EO = y-output
     outgrad = derivatives_sigmoid(output)
     d_output = EO* outgrad
