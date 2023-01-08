@@ -26,11 +26,6 @@ plt.title('K-Means Clustering')
 plt.xlabel('Petal Length')
 plt.ylabel('Petal Width')
 
-plt.subplot(2,2,2)
-plt.scatter(X.Petal_Length,X.Petal_Width,c=colormap[model.labels_],s=40)
-plt.title('K-Means Clustering')
-plt.ylabel('Petal Width')
-
 from sklearn import preprocessing
 scaler=preprocessing.StandardScaler()
 scaler.fit(X)
